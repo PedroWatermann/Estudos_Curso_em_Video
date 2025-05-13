@@ -1,0 +1,17 @@
+nome = input('\nQual é seu nome? \n')
+print('Prazer em te conhecer {:20}!\n'.format(nome))
+print('Prazer em te conhecer {:>20}!\n'.format(nome))
+print('Prazer em te conhecer {:<20}!\n'.format(nome))
+print('Prazer em te conhecer {:^20}!\n'.format(nome))
+print('Prazer em te conhecer {:=^20}!\n\n'.format(nome))
+
+
+n1 = int(input('Um valor: '))
+n2 = int(input('Outro valor: '))
+s = n1 + n2
+m = n1 * n2
+d = n1 / n2
+di = n1 // n2
+e = n1 ** n2
+print('A soma vale {}, o produto é {} e o quociente é {:.3f}.'.format(s, m, d), end=' ')
+print('A divisão inteira é {1} e a potência é {0}'.format(e, di))
