@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+
+<body>
+    <form action="cadastro.html" method="get" autocomplete="on">
+        <p>
+            <label for="n1">Número 1:</label>
+            <input type="number" name="n1" id="n1" min="0" max="50" oninput="soma.innerHTML = Number(n1.value) + Number(n2.value)" required>
+        </p>
+        <p>
+            <label for="n2">Número 2:</label>
+            <input type="number" name="n2" id="n2" min="0" max="50" oninput="soma.innerHTML = Number(n1.value) + Number(n2.value)" required>
+
+            <!-- Atributo oninput: axecuta scripts quando houver entrada de dados no respectivo input -->
+        </p>
+        <p>
+            <label for="soma">Soma:</label>
+            <output name="soma" id="soma">0</output>
+
+            <!-- O output apenas mostra algo para o usuário. Ele não é enviado pelo formulário -->
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+</body>
+
+</html>

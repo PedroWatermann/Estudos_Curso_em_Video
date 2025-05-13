@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+
+<body>
+    <h1>Exemplo de Formulário</h1>
+
+    <form action="cadastro.html" method="POST" autocomplete="on">
+        <p>
+            <label for="estado">Estado:</label>
+            <select name="estado" id="estado">
+                <optgroup label="Sudeste">
+                    <option value="ES">Espírito Santo</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="SP">São Paulo</option>
+                </optgroup>
+
+                <optgroup label="Sul">
+                    <option value="PR" selected>Paraná</option>
+                    <option value="SC">Santa Catarina</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                </optgroup>
+            </select>
+        </p>
+        <p>
+            <label for="profissao">Profissão:</label>
+            <input type="text" name="profissao" id="profissao" list="listaProfissao">
+            <datalist id="listaProfissao">
+                <option value="ADM">Administrador</option>
+                <option value="DEV">Desenvolvedor</option>
+                <option value="PRO">Professor</option>
+                <option value="DIR">Diretor</option>
+            </datalist>
+        </p>
+        <p>
+            <label for="msg">Mensagem:</label>
+            <textarea name="msg" id="msg" cols="30" rows="10" placeholder="Sua mensagem aqui..."></textarea>
+
+            <!-- Com textarea também é ideal usar POST -->
+        </p>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+</body>
+
+</html>

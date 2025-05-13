@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Query</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=menu"/>
+    <link rel="stylesheet" href="estilos/style.css">
+    <link rel="stylesheet" href="estilos/mediaQuery.css">
+</head>
+
+<body onresize="mudouTamanho()">
+    <header>
+        <h1>Meu Site</h1>
+
+        <span class="material-symbols-rounded" id="burger" onclick="burgerMenu()">menu</span>
+        <menu id="menu">
+            <ul>
+                <li><a href="#">Opção 1</a></li>
+                <li><a href="#">Opção 2</a></li>
+                <li><a href="#">Opção 3</a></li>
+                <li><a href="#">Opção 4</a></li>
+                <li><a href="#">Opção 5</a></li>
+            </ul>
+        </menu>
+    </header>
+
+    <main>
+        <article>
+            <h2>Testando media queries</h2>
+
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia aspernatur consequatur assumenda
+                provident quam inventore dicta laboriosam blanditiis error, commodi ipsa. Culpa cupiditate placeat
+                veniam quis distinctio dignissimos provident soluta! Lorem ipsum dolor sit amet consectetur adipisicing
+                elit. Soluta recusandae mollitia magni, repellendus iusto deserunt inventore alias quae. Sapiente illum
+                facilis optio autem temporibus corporis vitae nam suscipit iste qui? Lorem ipsum dolor sit amet
+                consectetur, adipisicing elit. Iure provident perspiciatis id placeat ad adipisci, eveniet nisi expedita
+                possimus fugit consequatur necessitatibus nesciunt praesentium assumenda optio sit nam eum cupiditate.
+            </p>
+
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia aspernatur consequatur assumenda
+                provident quam inventore dicta laboriosam blanditiis error, commodi ipsa. Culpa cupiditate placeat
+                veniam quis distinctio dignissimos provident soluta! Lorem ipsum dolor sit amet consectetur adipisicing
+                elit. Soluta recusandae mollitia magni, repellendus iusto deserunt inventore alias quae. Sapiente illum
+                facilis optio autem temporibus corporis vitae nam suscipit iste qui? Lorem ipsum dolor sit amet
+                consectetur, adipisicing elit. Iure provident perspiciatis id placeat ad adipisci, eveniet nisi expedita
+                possimus fugit consequatur necessitatibus nesciunt praesentium assumenda optio sit nam eum cupiditate.
+            </p>
+
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia aspernatur consequatur assumenda
+                provident quam inventore dicta laboriosam blanditiis error, commodi ipsa. Culpa cupiditate placeat
+                veniam quis distinctio dignissimos provident soluta! Lorem ipsum dolor sit amet consectetur adipisicing
+                elit. Soluta recusandae mollitia magni, repellendus iusto deserunt inventore alias quae. Sapiente illum
+                facilis optio autem temporibus corporis vitae nam suscipit iste qui? Lorem ipsum dolor sit amet
+                consectetur, adipisicing elit. Iure provident perspiciatis id placeat ad adipisci, eveniet nisi expedita
+                possimus fugit consequatur necessitatibus nesciunt praesentium assumenda optio sit nam eum cupiditate.
+            </p>
+        </article>
+    </main>
+
+    <script>
+        const itens = document.getElementById("menu");
+        
+        function burgerMenu() {
+            itens.style.display = itens.style.display == 'block' ? "none" : "block";
+        }
+
+        function mudouTamanho() {
+            itens.style.display = window.innerWidth >= 768 ? "block" : "none";
+        }
+    </script>
+</body>
+
+</html>

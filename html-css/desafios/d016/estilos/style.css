@@ -1,0 +1,150 @@
+@charset "UTF-8";
+
+/* 
+    Paleta de cores:
+    - Verde: #49a09d
+    - Lilás: #5f2c82
+*/
+
+
+* {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Faz com que a borda faça parte da conta da largura/altura */
+}
+
+:root {
+    --cor001: rgb(75, 160, 80);
+    --cor002: rgba(96, 44, 130, 0.8);
+}
+
+html,
+body {
+    background-color: var(--cor002);
+    height: 100svh;
+    width: 100svw;
+}
+
+main {
+    position: relative;
+    height: 100svh;
+    width: 100svw;
+}
+
+section#login {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: white;
+    width: 250px;
+    height: 510px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    transform: translate(-50%, -50%);
+    transition: width 0.3s ease, height 0.3s ease;
+}
+
+div#imagem {
+    display: block;
+    background: var(--cor002) url(../imagens/pinheiros.jpg) center / cover no-repeat;
+    height: 200px;
+}
+
+div#formulario {
+    display: block;
+    padding: 10px;
+}
+
+div#formulario>h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+div#formulario>p {
+    font-size: 0.8em;
+    margin: 15px 0;
+}
+
+div.campo {
+    background-color: rgb(100, 40, 130);
+    border: 2px solid rgb(100, 40, 130);
+    display: block;
+    width: 100%;
+    height: 40px;
+    border-radius: 8px;
+    margin: 5px 0;
+    overflow: hidden;
+}
+
+div.campo>span {
+    color: white;
+    font-size: 1.8em;
+    width: 40px;
+    padding: 5px;
+}
+
+div.campo>input {
+    background-color: rgb(170, 200, 200);
+    font-size: 1em;
+    width: calc(100% - 45px);
+    height: 100%;
+    border: none;
+    border-radius: 8px;
+    padding: 5px;
+    transform: translate(1px, calc(-17px / 2));
+    transition: background-color 0.5s ease;
+}
+
+div.campo>input:focus {
+    background-color: white;
+}
+
+div.campo>label {
+    display: none;
+}
+
+input[type=submit] {
+    display: block;
+    font-size: 1em;
+    width: 100%;
+    height: 40px;
+    background-color: var(--cor001);
+    color: whitesmoke;
+    border: none;
+    border-radius: 8px;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+    transition: background-color 0.3s ease;
+}
+
+input[type=submit]:hover {
+    background-color: #4b7020;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+a.botao {
+    display: block;
+    text-align: center;
+    font-size: 1em;
+    width: 100%;
+    height: 40px;
+    padding-top: 7px;
+    margin-top: 5px;
+    background-color: white;
+    color: #2d3030;
+    border: 1px solid #4bc090;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+a.botao:hover {
+    background-color: #4bc090;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+a.botao>span {
+    font-size: 1em;
+}

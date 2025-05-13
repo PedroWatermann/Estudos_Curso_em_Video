@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uso de iframes</title>
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        iframe#tela {
+            width: 95svw;
+            border: 2px solid black;
+            height: 400px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Faça uma escolha</h1>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, sint asperiores quos voluptas laudantium nulla
+        magnam recusandae, illum expedita magni provident ab molestiae tempore neque commodi dolorem quisquam,
+        exercitationem nemo!</p>
+
+    <ul>
+        <!-- O target indica onde o link deve ser aberto -->
+        <!-- Para ser aberto no iframe o mesmo deve ter um name e este deve ser referenciado no target -->
+        <li><a href="paginasExtras/pag001.html" target="tela">Primeira página</a></li>
+        <li><a href="paginasExtras/pag002.html" target="tela">Segunda página</a></li>
+        <li><a href="paginasExtras/pag003.html" target="tela">Terceira página</a></li>
+    </ul>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora ut tenetur aspernatur asperiores, natus facilis
+        quos eveniet placeat sint nulla minus soluta blanditiis unde aut quas provident sequi consequatur ratione!
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident doloribus enim voluptatum quos ipsa odio
+        repellat quia quas eaque quis eius corporis, architecto maiores quaerat dicta, fugit, nisi exercitationem.
+        Omnis?</p>
+
+    <!-- srcdoc permite a inserção de código html para ser exibido por padrão no iframe (não muito recomendado) -->
+
+    <iframe id="tela" name="tela" frameborder="0" srcdoc="
+        <h1 style='text-align: center;'>Escolha uma das opções acima</h1>
+        <p style='text-align: center;'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur quia porro, aliquid, vero repellat dolorem animi autem maxime odio laboriosam ipsum reprehenderit quibusdam molestiae delectus dolore, tempore accusamus. Quo, iusto.</p>
+        <div style='display: flex;'> 
+            <img src='https://th.bing.com/th/id/OIP.0OAV3XQmo2sRdfwCGln_SQAAAA?' style='margin: auto;'>
+        </div>
+    ">
+        <p>Infelizmente seu navegador não é compatível com isso.</p>
+    </iframe>
+
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sed, libero cum beatae quidem qui autem optio dolores
+        voluptate nulla obcaecati ducimus consequuntur odit reprehenderit cupiditate similique natus voluptates? Beatae,
+        dignissimos. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae eveniet, enim nostrum, cupiditate
+        reprehenderit, aut minima numquam rerum sit odio necessitatibus praesentium natus ipsa culpa eius quo iste modi
+        cum?</p>
+</body>
+
+</html>

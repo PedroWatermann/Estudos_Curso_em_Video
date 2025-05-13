@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+
+<body>
+    <h1>Exemplo de Formulário</h1>
+
+    <form action="cadastro.html" method="get" autocomplete="on">
+        <fieldset>
+            <legend>Dados Pessoais</legend>
+            <p>
+                <label for="nome">Nome:</label>
+                <input type="text" name="nome" id="nome" minlength="5" maxlength="20" required>
+            </p>
+            <p>
+                <label for="email">E-mail:</label>
+                <input type="email" name="email" id="email" autocomplete="email" required>
+            </p>
+            <p>
+                <label for="telefone">Telefone:</label>
+                <input type="tel" name="telefone" id="telefone" autocomplete="tel" pattern="^\(\d{2}\)\d{4, 5}-\d{4}$" required>
+            
+                <!-- Estudar sobre RegEx para definir um padrão para o telefone -->
+                <!-- Toda RegEx inicia com '^' e termina com '$' e deve ser colocada no atributo pattern -->
+                <!--
+                    Dígitos: '\d' ou '[0-9]'
+                    Quantidade: '{}'
+                    Quantidade (intervalo): '{4, 5}'
+                    Parênteses: '\(', '\)'
+                    "^\d{4}-\d{4}$" ==> Aceita de 4 a 5 dígitos, seguidos de um traço, seguido de 4 dígitos
+                -->
+            </p>
+        </fieldset>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+</body>
+
+</html>

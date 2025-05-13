@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulários</title>
+</head>
+
+<body>
+    <h1>Exemplo de Formulário</h1>
+
+    <form action="cadastro.html" method="get" autocomplete="on">
+        <fieldset>
+            <legend>Sexo</legend>
+            <input type="radio" name="sexo" id="masculino" value="M" checked> <label for="masculino">Masculino</label> <br>
+            <input type="radio" name="sexo" id="feminino" value="F"> <label for="feminino">Feminino</label>
+
+            <!-- Para que os radio buttons sejam do mesmo grupo, todos os relacionado devem ter o mesmo NAME (isso não funciona para checkboxes) -->
+
+            <!-- Atributo checked: inicia o input já marcado -->
+            <!-- Atributo value: para o radio button é essencial para enviar o valor do radio selecionado -->
+        </fieldset>
+        <fieldset>
+            <legend>Esportes favoritos</legend>
+            <input type="checkbox" name="basquete" id="basquete" checked> <label for="basquete">Basquete</label> <br>
+            <input type="checkbox" name="futebol" id="futebol" checked> <label for="futebol">Futebol</label> <br>
+            <input type="checkbox" name="natacao" id="natacao"> <label for="natacao">Natação</label> <br>
+            <input type="checkbox" name="tenis" id="tenis"> <label for="tenis">Tênis</label> <br>
+        </fieldset>
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexible Box</title>
+
+    <style>
+
+        /* CONFIGURAÇÃO PADRÃO
+
+        flex: 0 1 auto; 
+            \_> flex: initial;
+
+        */
+
+        /* NENHUM ITEM FLEXÍVEL
+
+        flex: 0 0 auto; 
+            \_> flex: none;
+
+        */
+
+        /* MÁXIMO DE FLEXIBILIDADE
+
+        flex: 1 1 auto; 
+            \_> flex: auto;
+            
+        */
+
+        /* CONFIGURA APENAS O GROW
+
+        flex: 3; 
+            \_> flex: 3 1 auto;
+
+        */
+
+        div.container {
+            background-color: lightsalmon;
+
+            display: flex;
+            flex-flow: row nowrap;
+        }
+
+        div.item {
+            background-color: lightblue;
+            border: 1px solid black;
+            text-align: center;
+        }
+
+        div.A {
+            /* flex-grow: 1;
+            flex-shrink: 0;
+            flex-basis: 150px; */
+
+            flex: 1 0 150px;
+        }
+
+        div.B {
+            /* flex-grow: 1;
+            flex-shrink: 1;
+            flex-basis: 100px; */
+
+            flex: 1 1 100px;
+        }
+
+        div.C {
+            /* flex-grow: 1;
+            flex-shrink: 8;
+            flex-basis: auto; */
+
+            flex: 1 8 auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item A" id="iA">A</div>
+        <div class="item B" id="iB">B</div>
+        <div class="item C" id="iC">C</div>
+    </div>
+
+    <p>
+        <output id="oA">A:</output>
+        <br><br>
+        <output id="oB">B:</output>
+        <br><br>
+        <output id="oC">C:</output>
+    </p>
+
+    <script>
+        window.addEventListener("resize", () => {
+            const iA = document.getElementById("iA").clientWidth;
+            const iB = document.getElementById("iB").clientWidth;
+            const iC = document.getElementById("iC").clientWidth;
+
+            document.getElementById("oA").textContent = `A: ${iA}px`;
+            document.getElementById("oB").textContent = `B: ${iB}px`;
+            document.getElementById("oC").textContent = `C: ${iC}px`;
+        });        
+
+        window.addEventListener("load", () => {
+            const iA = document.getElementById("iA").clientWidth;
+            const iB = document.getElementById("iB").clientWidth;
+            const iC = document.getElementById("iC").clientWidth;
+
+            document.getElementById("oA").textContent = `A: ${iA}px`;
+            document.getElementById("oB").textContent = `B: ${iB}px`;
+            document.getElementById("oC").textContent = `C: ${iC}px`;
+        });
+    </script>
+</body>
+
+</html>

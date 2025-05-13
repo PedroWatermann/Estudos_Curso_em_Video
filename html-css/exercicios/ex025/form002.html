@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+</head>
+
+<body>
+    <h1>Teste de Formulário</h1>
+
+    <form action="cadastro.html" method="get" autocomplete="on">
+        <p>
+            <label for="usuario">Usuário:</label>
+            <input type="text" name="usuario" id="usuario" required minlength="5" maxlength="15" size="5" placeholder="Nome do usuário" autocomplete="username">
+
+            <!-- required = obrigatório -->
+            <!-- minlength = tamanho mínimo; maxlength = tamanho máximo -->
+            <!-- size = tamanho máximo do input -->
+            <!-- placeholder = 'dica' do que é solicitado -->
+            <!-- Para que o autocomplete de cada input esteja correto DEVEMOS LIGAR o autocomplete no FORM e especificar qual tipo de dado cada input espera utilizando o autocomplete dentro do input também (duplinha do autocomplete) -->
+        </p>
+
+        <p>
+            <label for="senha">Senha:</label>
+            <input type="password" name="senha" id="senha" required minlength="8" maxlength="20" placeholder="Mínimo 8 letras" autocomplete="current-password">
+        </p>
+
+        <p>
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Limpar">
+        </p>
+    </form>
+</body>
+
+</html>

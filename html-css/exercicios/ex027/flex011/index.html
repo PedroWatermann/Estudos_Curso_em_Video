@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexible Box</title>
+
+    <style>
+        div.container {
+            background-color: lightsalmon;
+
+            display: flex;
+            flex-flow: row nowrap;
+        }
+
+        div.item {
+            background-color: lightblue;
+            border: 1px solid black;
+            text-align: center;
+
+            flex-basis: 150px;
+        }
+
+        div.A {
+            flex-shrink: 0;
+            flex-grow: 1;
+        }
+
+        div.B {
+            flex-shrink: 1;
+            flex-grow: 1;
+        }
+
+        div.C {
+            flex-shrink: 8;
+            flex-grow: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item A" id="iA">A</div>
+        <div class="item B" id="iB">B</div>
+        <div class="item C" id="iC">C</div>
+    </div>
+
+    <p>
+        <output id="oA">A:</output>
+        <br><br>
+        <output id="oB">B:</output>
+        <br><br>
+        <output id="oC">C:</output>
+    </p>
+
+    <script>
+        window.addEventListener("resize", () => {
+            const iA = document.getElementById("iA").clientWidth;
+            const iB = document.getElementById("iB").clientWidth;
+            const iC = document.getElementById("iC").clientWidth;
+
+            document.getElementById("oA").textContent = `A: ${iA}px`;
+            document.getElementById("oB").textContent = `B: ${iB}px`;
+            document.getElementById("oC").textContent = `C: ${iC}px`;
+        });        
+
+        window.addEventListener("load", () => {
+            const iA = document.getElementById("iA").clientWidth;
+            const iB = document.getElementById("iB").clientWidth;
+            const iC = document.getElementById("iC").clientWidth;
+
+            document.getElementById("oA").textContent = `A: ${iA}px`;
+            document.getElementById("oB").textContent = `B: ${iB}px`;
+            document.getElementById("oC").textContent = `C: ${iC}px`;
+        });
+    </script>
+</body>
+
+</html>

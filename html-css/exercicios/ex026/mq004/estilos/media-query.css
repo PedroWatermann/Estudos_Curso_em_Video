@@ -1,0 +1,141 @@
+@charset "UTF-8";
+
+/* Todas as demais mídias */
+
+/* Typical Device Brakpoints
+- Pequenas telas: 0 - 600px
+- Celular: 600 - 768px
+- Tablet: 169 - 992px
+- Desktop: 993 - 1200px
+- Grandes telas: +1200px
+*/
+
+/* Impressora */
+@media print {
+    * {
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    body {
+        /* Não é possível imprimir background-image */
+        background-image: url(../../imagens/back-print.jpg);
+    }
+
+    
+    main {
+        border: 2px solid black;
+    }
+    
+    main::after {
+        font-size: 0.4em;
+        text-decoration: overline;
+        content: "Essa impressão foi feita através do site www.pedrowatermann.github.io";
+    }
+
+    main h1 {
+        font-size: 2em;
+        text-shadow: none;
+        color: black;
+    }
+
+    img#phone {
+        display: none;
+    }
+
+    img#tablet {
+        display: none;
+    }
+
+    img#print {
+        display: block;
+    }
+
+    img#pc {
+        display: none;
+    }
+
+    img#tv {
+        display: none;
+    }
+}
+
+/* Tablet */
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    body {
+        background-image: url(../../imagens/back-tablet.jpg);
+    }
+
+    img#phone {
+        display: none;
+    }
+
+    img#tablet {
+        display: block;
+    }
+
+    img#print {
+        display: none;
+    }
+
+    img#pc {
+        display: none;
+    }
+
+    img#tv {
+        display: none;
+    }
+}
+
+/* Dekstop */
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+    body {
+        background-image: url(../../imagens/back-pc.jpg);
+    }
+
+    img#phone {
+        display: none;
+    }
+
+    img#tablet {
+        display: none;
+    }
+
+    img#print {
+        display: none;
+    }
+
+    img#pc {
+        display: block;
+    }
+
+    img#tv {
+        display: none;
+    }
+}
+
+/* Grandes telas */
+@media screen and (min-width: 1200px) {
+    body {
+        background-image: url(../../imagens/back-tv.jpg);
+    }
+
+    img#phone {
+        display: none;
+    }
+
+    img#tablet {
+        display: none;
+    }
+
+    img#print {
+        display: none;
+    }
+
+    img#pc {
+        display: none;
+    }
+
+    img#tv {
+        display: block;
+    }
+}

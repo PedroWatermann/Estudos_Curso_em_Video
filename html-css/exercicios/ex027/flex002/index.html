@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexible Box</title>
+
+    <style>
+        div.container1 {
+            background-color: lightsalmon;
+            margin: 20px;
+            border: 2px solid black;
+
+            display: flex;
+            flex-direction: row;
+            /* Padrão */
+        }
+
+        div.item1 {
+            background-color: lightblue;
+            border: 1px solid black;
+            text-align: center;
+            padding: 10px;
+            margin: 5px;
+        }
+
+        /* ----------------------------------------------- */
+
+        div.container2 {
+            background-color: lightcoral;
+            margin: 20px;
+            border: 2px solid black;
+
+            display: flex;
+            flex-direction: row-reverse;
+        }
+
+        div.item2 {
+            background-color: lightgoldenrodyellow;
+            border: 1px solid black;
+            text-align: center;
+            padding: 10px;
+            margin: 5px;
+        }
+
+        /* ----------------------------------------------- */
+
+        div.container3 {
+            background-color: lightyellow;
+            margin: 20px;
+            border: 2px solid black;
+
+            display: flex;
+            flex-direction: column;
+        }
+
+        div.item3 {
+            background-color: lightpink;
+            border: 1px solid black;
+            text-align: center;
+            padding: 10px;
+            margin: 5px;
+        }
+
+        /* ----------------------------------------------- */
+
+        div.container4 {
+            background-color: lightskyblue;
+            margin: 20px;
+            border: 2px solid black;
+
+            display: flex;
+            flex-direction: column-reverse;
+        }
+
+        div.item4 {
+            background-color: lightslategray;
+            border: 1px solid black;
+            text-align: center;
+            padding: 10px;
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Main Axis</h2>
+    <p>Eixo principal na direção do flex-direction.</p>
+
+    <h2>Cross Axis</h2>
+    <p>Eixo transversal na direção transversal do flex-direction.</p>
+
+    <h2>Main Start / End</h2>
+    <p>Ponto no início e no fim, respectivamente, do eixo principal.</p>
+
+    <h2>Cross Start / End</h2>
+    <p>Ponto no início e no fim, respectivamente, do eixo transversal.</p>
+
+    <div class="container1">
+        <div class="item1">A</div>
+        <div class="item1">B</div>
+        <div class="item1">C</div>
+        <div class="item1">D</div>
+        <div class="item1">E</div>
+        <div class="item1">F</div>
+        <div class="item1">G</div>
+    </div>
+
+    <div class="container2">
+        <div class="item2">A</div>
+        <div class="item2">B</div>
+        <div class="item2">C</div>
+        <div class="item2">D</div>
+        <div class="item2">E</div>
+        <div class="item2">F</div>
+        <div class="item2">G</div>
+    </div>
+
+    <div class="container3">
+        <div class="item3">A</div>
+        <div class="item3">B</div>
+        <div class="item3">C</div>
+        <div class="item3">D</div>
+        <div class="item3">E</div>
+        <div class="item3">F</div>
+        <div class="item3">G</div>
+    </div>
+
+    <div class="container4">
+        <div class="item4">A</div>
+        <div class="item4">B</div>
+        <div class="item4">C</div>
+        <div class="item4">D</div>
+        <div class="item4">E</div>
+        <div class="item4">F</div>
+        <div class="item4">G</div>
+    </div>
+</body>
+
+</html>
